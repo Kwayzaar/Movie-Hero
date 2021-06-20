@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  margin: auto;
+  align-self: center;
+  flex-direction: column;
+  width: 350px;
+  padding: 20px;
+  box-shadow: 0 0 15px -6px rgb(172, 172, 172)
+}
+
+form input {
+  margin: 10px;
+}

@@ -1,7 +1,10 @@
 import { Component, Profiler } from 'react';
 import './App.css';
-import SignUpForm from './components/SignUpForm';
-import LoginForm from './components/LoginForm';
+import SignUpForm from './ pages/SignUpForm';
+import LoginForm from './ pages/LoginForm';
+import HomePage from './ pages/HomePage';
+import {Route, Switch } from 'react-router-dom';
+import PrivateRoute from './components/PrivateRoute';
 
 const baseUrl = "http://localhost:3000/"
 
@@ -58,7 +61,7 @@ class App extends Component {
     .then(user => this.setState({ user }) )
   }
 
-  login = (username, password) => {
+  login = (username, password, history) => {
     fetch(baseUrl + "/login", {
       method: "POST", 
       headers: {
@@ -78,6 +81,7 @@ class App extends Component {
         this.setState({
           user: result.user
         })
+        history.push('/')
       } else {
         this.setState({
           error: result.error
@@ -89,18 +93,19 @@ class App extends Component {
   render () {
     return (
       <div className="App">
-        {this.state.user.username
-          ? <h2>Welcome, {this.state.user.first_name}!</h2>
-          : (
-          <> 
-            <SignUpForm signUp={ this.signUp } />
-            <LoginForm login={ this.login } error={this.state.error} />
-          </>    
-          )
-        }
+        <Switch>
+          <Route path="/signup" render={(routerProps) => <SignUpForm {...routerProps} signUp={this.signUp} />} />
+          <Route path="/login" render={(routerProps) => <LoginForm {...routerProps} login={this.login} error={this.state.error} />} />
+
+          {/* privateRoute placed below other routes so Switch can see those routes and render the login page   */}
+          {/* <PrivateRoute path="/" component={HomePage} user={this.state.user} /> */}
+          {/* Homepage route: use for landing page and provide login link up top  */}
+          <Route exact path="/" render={(routerProps) => <HomePage {...routerProps} user={this.state.user} />} />
+        </Switch>
       </div>
     );
   }
+
 }
 
 export default App;

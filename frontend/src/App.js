@@ -1,14 +1,40 @@
-import { Component } from 'react';
+import { Component, Profiler } from 'react';
 import './App.css';
 import SignUpForm from './components/SignUpForm';
 import LoginForm from './components/LoginForm';
 
-const baseUrl = "http://localhost:3000"
+const baseUrl = "http://localhost:3000/"
 
 class App extends Component {
   // store user in state 
   state = {
-    user: {}
+    user: {},
+    error: ""
+  }
+
+  //send this down to any component we wish to stay logged into 
+  componentDidMount(){
+    this.validateUser()
+  }
+
+  validateUser = () => {
+    let token = localStorage.getItem('token')
+    if(token){
+      fetch(baseUrl + "profile", {
+        method: "GET", 
+        headers: {
+          "Authorization": `Bearer ${token}`
+        }
+      })
+      .then(response => response.json())
+      .then(result => {
+        if(result.id){
+          this.setState({
+            user: result
+          })
+        }
+      })
+    }
   }
 
   signUp = user => {
@@ -45,17 +71,30 @@ class App extends Component {
         }
       })
     })
+    .then(response => response.json())
+    .then(result => {
+      if(result.token){
+        localStorage.setItem('token', result.token)
+        this.setState({
+          user: result.user
+        })
+      } else {
+        this.setState({
+          error: result.error
+        })
+      }
+    })
   }
 
   render () {
     return (
       <div className="App">
         {this.state.user.username
-          ? <h2>Welcome { this.state.user.firstName }!</h2>
+          ? <h2>Welcome, {this.state.user.first_name}!</h2>
           : (
           <> 
             <SignUpForm signUp={ this.signUp } />
-            <LoginForm login={ this.login } />
+            <LoginForm login={ this.login } error={this.state.error} />
           </>    
           )
         }

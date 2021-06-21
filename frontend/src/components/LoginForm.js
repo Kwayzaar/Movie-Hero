@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function LoginForm({ login }) {
+export default function LoginForm({ login, error }) {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
 
@@ -18,6 +18,7 @@ export default function LoginForm({ login }) {
       <input name="username" value={username} onChange={handleUsernameChange} />
       <label>Password</label>
       <input type="password" name="password" value={password} onChange={handlePasswordChange} />
+      {error ? <p style={{color: 'red'}}>{error}</p> : null}
       <input type="submit" value="Login"/>
     </form>
   )

@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   def profile 
     rend json: @user 
   end
-
+  
   def create
     @user = User.create(user_params)
 
@@ -19,12 +19,12 @@ class UsersController < ApplicationController
       @token = JWT.encode({user_id: @user.id}, Rails.application.secrets.secret_key_base[0])
 
       render json: {user: @user, token: @token}
-    else
-      render json: {error: "Invalid Credentials"}, status: :unauthorized 
-    end
+    else 
+      render json: {error: "Invalid Credentials"}, status: :unauthorized
+    end 
   end 
 
-  private 
+  private
 
   def user_params
     params.require(:user).permit(:first_name, :last_name, :username, :password)

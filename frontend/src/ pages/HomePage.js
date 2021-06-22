@@ -2,23 +2,28 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import MovieCard from '../components/MovieCard'
 
-export default function HomePage({ user, baseUrl }) {
+export default function HomePage({ user }) {
   const [movies, setMovies] = useState([])
 
-  useEffect( () => {
-    fetch("http://localhost3000/movie")
-    .then(response => response.json())
-    .then(result => (console.log))
-  })
-
-  const displayMovieCard = () => {
-    return movies.map(movie => {
-      return <MovieCard
-        key = { movie.id }
-        movie = { movie }      
-      />
+  const componentDidMount = () => {
+    fetch("http://localhost:3000/movies", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json"
+      }
+      .then(response => response.json())
+      .then(movie => console.log(movie))
     })
-  } 
+  }
+
+  // const displayMovieCard = () => {
+  //   return movies.map(movie => {
+  //     return <MovieCard
+  //       key = { movie.id }
+  //       movie = { movie }      
+  //     />
+  //   })
+  // } 
 
   return (
     <div>
@@ -70,7 +75,7 @@ export default function HomePage({ user, baseUrl }) {
         </div>
         <section className="movie-section">
           Airline Grid goes here 
-          { displayMovieCard() }
+          {/* { displayMovieCard() } */}
         </section>
       </main>
     </div>

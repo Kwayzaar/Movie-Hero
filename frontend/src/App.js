@@ -23,7 +23,7 @@ class App extends Component {
   validateUser = () => {
     let token = localStorage.getItem('token')
     if(token){
-      fetch(baseUrl + "profile", {
+      fetch(baseUrl + "/profile", {
         method: "GET", 
         headers: {
           "Authorization": `Bearer ${token}`

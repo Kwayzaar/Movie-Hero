@@ -5,17 +5,18 @@ class UsersController < ApplicationController
   def index
     @users = User.all
 
-    render json: @users, include: [:reviews], methods: [:movie_names]
+    render json: @users, status: :ok
+    # include: [:reviews], methods: [:movie_names]
   end 
-
-  def profile 
-    render json: @user
-  end
 
   def create 
     @user = User.create(user_params)
 
     render json: @user, status: :created
+  end
+
+  def profile 
+    render json: @user
   end
 
   def login 

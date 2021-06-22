@@ -98,7 +98,7 @@ class App extends Component {
           <Route path="/login" render={(routerProps) => <LoginForm {...routerProps} login={this.login} error={this.state.error} />} />
 
           {/* privateRoute placed below other routes so Switch can see those routes and render the login page   */}
-          {/* <PrivateRoute path="/" component={HomePage} user={this.state.user} /> */}
+          <PrivateRoute path="/" component={HomePage} user={this.state.user} />
           
           {/* Homepage route: use for landing page and provide login link up top  */}
           <Route exact path="/" render={(routerProps) => <HomePage {...routerProps} user={this.state.user} />} />

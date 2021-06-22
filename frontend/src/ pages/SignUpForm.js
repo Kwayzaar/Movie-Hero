@@ -37,7 +37,7 @@ class SignUpForm extends Component {
         <label>Password</label>
           <input type="password" value={this.state.password} name="password" onChange={this.handleChange} />
           <p>
-            Already a user?
+            Already a keeping track?
             <Link to="/login">Login</Link>
           </p>
           <input type="submit" value="Sign Up" />

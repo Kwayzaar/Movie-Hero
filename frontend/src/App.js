@@ -5,6 +5,7 @@ import LoginForm from './ pages/LoginForm';
 import HomePage from './ pages/HomePage';
 import {Route, Switch } from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoute';
+import ReviewPage from './ pages/ReviewPage';
 
 const baseUrl = "http://localhost:3000"
 
@@ -12,7 +13,8 @@ class App extends Component {
   // store user in state 
   state = {
     user: {},
-    error: ""
+    error: "",
+    // movies: []
   }
 
   //send this down to any component we wish to stay logged into 
@@ -96,12 +98,13 @@ class App extends Component {
         <Switch>
           <Route path="/signup" render={(routerProps) => <SignUpForm {...routerProps} signUp={this.signUp} />} />
           <Route path="/login" render={(routerProps) => <LoginForm {...routerProps} login={this.login} error={this.state.error} />} />
-
+          <Route path="/review" render={(routerProps) => <ReviewPage {...routerProps} />} />
+          
           {/* privateRoute placed below other routes so Switch can see those routes and render the login page   */}
           <PrivateRoute path="/" component={HomePage} user={this.state.user} />
           
           {/* Homepage route: use for landing page and provide login link up top  */}
-          <Route exact path="/" render={(routerProps) => <HomePage {...routerProps} user={this.state.user} />} />
+          <Route exact path="/" render={(routerProps) => <HomePage {...routerProps} movies={this.state.movies} user={this.state.user} />} />
         </Switch>
       </div>
     );

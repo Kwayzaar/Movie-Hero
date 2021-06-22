@@ -1,3 +1,276 @@
+/* Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body * {
+}
+
+body {
+  height: 100vh;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+body ul {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  background-color: #1D3557;
+  z-index: 10;
+  position: fixed;
+  transition: top 0.2s linear;
+}
+
+header ul {
+  display: flex;
+}
+
+.nav-wrap {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 40px;
+  position: relative;
+}
+
+ul.nav-text a {
+  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: row nowrap;
+  align-items: center;
+  overflow: visible;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-text {
+  font-size: 1em;
+} 
+
+header a.logo {
+  display: block;
+  margin-right: 16px;
+  width: 154px;
+  height: 20px;
+}
+
+header a {
+  color: #fff;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+header ul li {
+  align-items: center;
+  align-content: center;
+}
+
+.movies-link {
+  display: flex;
+  padding: .5rem .5rem;
+  outline: 0;
+  flex-direction: row;
+  flex: 1 1 auto;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.actors-link {
+  flex: 0 0 auto;
+  position: relative;
+  border-width: 0;
+  outline: 0;
+  padding: .5rem .5rem;
+  align-items: center;
+}
+
+.nav-extra  {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header div.extra {
+  justify-content: flex-end;
+}
+
+header ul.extra li {
+  margin-left: 30px;
+}
+
+section.top-content {
+  min-height: 300px;
+  max-height: 360px;
+  height: calc(100vh / 2.5);
+  background: -webkit-linear-gradient(rgba(69, 123, 157, 0.8), rgba(168, 218, 220, 0.8)), url("https://image.pngaaa.com/926/2988926-small.png");
+  background: linear-gradient(rgba(69, 123, 157, 0.86), rgba(168, 218, 220, 0.65)), url("https://ychef.files.bbci.co.uk/976x549/p09f3lcg.jpg");
+  display: flex;
+  justify-content: center;
+}
+
+div.content-wrap {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+div.content-wrap h2, div.content-wrap h3, h4 {
+  font-size: 3em;
+  font-weight: 700;
+  color: white;
+  line-height: 1;
+}
+
+div.content-wrap h4 {
+  font-size: 1.5em;
+}
+
+h1, h2 {
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+section.movie-section {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+div.card-wrap {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+  align-items: center;
+  align-content: center;
+  min-height: 0;
+  height: auto;
+  position: relative;
+  margin: 1em;
+  /* top: 0;
+  left: 0; */
+}
+
+.image {
+  width: 300px;
+  height: 400px;
+}
+
+div.image img{
+  display: flex;
+}
+
+a.image img {
+  border-radius: 25px;
+  width: 100%;
+  height: 100%;
+  box-shadow: 
+    0 2px 25px rgb(0 0 0 / 70%);
+  border-radius: 25px;
+  display: inline-block;
+  outline: none;
+}
+
+h3.card-content {
+  font-size: 1.5em;
+  font-weight: 550;
+}
+
+
+
+
+
+
+/* Palette */
+/* turqouise: 8ECAE6
+green-blue: 219EBC
+blue: 023047
+orange-yellow: FFB703
+orange: FB8500 */
+
 .App {
   text-align: center;
 }

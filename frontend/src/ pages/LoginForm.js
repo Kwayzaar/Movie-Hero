@@ -25,7 +25,7 @@ export default function LoginForm({ login, error, history }) {
       <label>Password</label>
       <input type="password" name="password" value={password} onChange={handlePasswordChange} />
       <p>
-        Not registered? 
+        Ready to start tracking? 
         <Link to="/signup">Join Us.</Link> 
       </p>
       {error ? <p style={{color: 'red'}}>{error}</p> : null}

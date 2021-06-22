@@ -94,8 +94,8 @@ class App extends Component {
     return (
       <div className="App">
         <Switch>
-          <Route path="/signup" render={(routerProps) => <SignUpForm {...routerProps} signUp={this.signUp} />} />
-          <Route path="/login" render={(routerProps) => <LoginForm {...routerProps} login={this.login} error={this.state.error} />} />
+          {/* <Route path="/signup" render={(routerProps) => <SignUpForm {...routerProps} signUp={this.signUp} />} />
+          <Route path="/login" render={(routerProps) => <LoginForm {...routerProps} login={this.login} error={this.state.error} />} /> */}
 
           {/* privateRoute placed below other routes so Switch can see those routes and render the login page   */}
           {/* <PrivateRoute path="/" component={HomePage} user={this.state.user} /> */}

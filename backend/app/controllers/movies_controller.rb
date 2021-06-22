@@ -5,6 +5,12 @@ class MoviesController < ApplicationController
     render json: @movies
   end 
 
+  def show
+    @movie = Movie.find(params[:id])
+
+    render json: @movie, include: :powers, methods: [:]
+  end 
+
   def destroy
     @movie = Movie.find params[:id] 
     @movie.destroy

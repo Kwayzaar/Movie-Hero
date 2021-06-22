@@ -6,7 +6,7 @@ import HomePage from './ pages/HomePage';
 import {Route, Switch } from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoute';
 
-const baseUrl = "http://localhost:3000"
+const baseUrl = "http://localhost:3000/"
 
 class App extends Component {
   // store user in state 
@@ -23,7 +23,7 @@ class App extends Component {
   validateUser = () => {
     let token = localStorage.getItem('token')
     if(token){
-      fetch(baseUrl + "/profile", {
+      fetch(baseUrl + "profile", {
         method: "GET", 
         headers: {
           "Authorization": `Bearer ${token}`
@@ -41,7 +41,7 @@ class App extends Component {
   }
 
   signUp = user => {
-    fetch(baseUrl + "/users", {
+    fetch(baseUrl + "users", {
       method: "POST",
       headers: {
         "Accept": "application/json",
@@ -62,7 +62,7 @@ class App extends Component {
   }
 
   login = (username, password, history) => {
-    fetch(baseUrl + "/login", {
+    fetch(baseUrl + "login", {
       method: "POST", 
       headers: {
         "Content-Type": 'application/json'
@@ -94,14 +94,14 @@ class App extends Component {
     return (
       <div className="App">
         <Switch>
-          {/* <Route path="/signup" render={(routerProps) => <SignUpForm {...routerProps} signUp={this.signUp} />} />
-          <Route path="/login" render={(routerProps) => <LoginForm {...routerProps} login={this.login} error={this.state.error} />} /> */}
+          <Route path="/signup" render={(routerProps) => <SignUpForm {...routerProps} signUp={this.signUp} />} />
+          <Route path="/login" render={(routerProps) => <LoginForm {...routerProps} login={this.login} error={this.state.error} />} />
 
           {/* privateRoute placed below other routes so Switch can see those routes and render the login page   */}
-          {/* <PrivateRoute path="/" component={HomePage} user={this.state.user} /> */}
+          <PrivateRoute path="/" component={HomePage} user={this.state.user} />
           
           {/* Homepage route: use for landing page and provide login link up top  */}
-          <Route exact path="/" render={(routerProps) => <HomePage {...routerProps} user={this.state.user} />} />
+          <Route exact path="/" render={(routerProps) => <HomePage {...routerProps} user={this.state.user} baseUrl={baseUrl} />} />
         </Switch>
       </div>
     );

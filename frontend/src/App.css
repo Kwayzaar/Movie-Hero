@@ -1,25 +1,3 @@
-.App {
-  text-align: center;
-}
-
-form {
-  display: flex;
-  margin: auto;
-  align-self: center;
-  flex-direction: column;
-  width: 350px;
-  padding: 20px;
-  box-shadow: 0 0 15px -6px rgb(172, 172, 172)
-}
-
-form input {
-  margin: 10px;
-}
-
-h2.login-title {
-  margin: 5px 0 10px 0;
-}
-
 /* Reset */
 
 html, body, div, span, applet, object, iframe,
@@ -64,6 +42,10 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+
+.App {
+  text-align: center;
 }
 
 body * {
@@ -154,6 +136,24 @@ header ul li {
   align-content: center;
 }
 
+form {
+  display: flex;
+  margin: auto;
+  align-self: center;
+  flex-direction: column;
+  width: 350px;
+  padding: 20px;
+  box-shadow: 0 0 15px -6px rgb(172, 172, 172)
+}
+
+form input {
+  margin: 10px;
+}
+
+h2.login-title, .signup-title {
+  margin: 5px 0 10px 0;
+}
+
 .movies-link {
   display: flex;
   padding: .5rem .5rem;
@@ -221,7 +221,7 @@ div.content-wrap h4 {
   font-size: 1.5em;
 }
 
-h2 {
+h2, h1 {
   margin: 0;
   font-size: 1.5em;
   font-weight: 600;

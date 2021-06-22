@@ -1,4 +1,6 @@
 class MoviesController < ApplicationController
+  # skip_before_action :authorized, only: :index 
+
   def index
     @movies = Movie.all
 
@@ -8,7 +10,7 @@ class MoviesController < ApplicationController
   def show
     @movie = Movie.find(params[:id])
 
-    render json: @movie, include: :powers, methods: [:]
+    render json: @movie
   end 
 
   def destroy

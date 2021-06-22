@@ -26,7 +26,7 @@ class SignUpForm extends Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <h1>Sign Up</h1>
+        <h1 className="signup-title">Sign Up</h1>
         {/* value of name attribute based on backend  */}
         <label>FirstName</label>
           <input name="firstName" value={this.state.firstName} onChange={this.handleChange} />

@@ -2,6 +2,12 @@ class UsersController < ApplicationController
     
   skip_before_action :authorized, only: [:create, :login]
 
+  def index
+    @users = User.all
+
+    render json: @users, include: [:reviews], methods: [:movie_names]
+  end 
+
   def profile 
     render json: @user
   end

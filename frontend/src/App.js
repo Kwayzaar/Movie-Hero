@@ -6,7 +6,7 @@ import HomePage from './ pages/HomePage';
 import {Route, Switch } from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoute';
 
-const baseUrl = "http://localhost:3000/"
+const baseUrl = "http://localhost:3000"
 
 class App extends Component {
   // store user in state 
@@ -99,6 +99,7 @@ class App extends Component {
 
           {/* privateRoute placed below other routes so Switch can see those routes and render the login page   */}
           {/* <PrivateRoute path="/" component={HomePage} user={this.state.user} /> */}
+          
           {/* Homepage route: use for landing page and provide login link up top  */}
           <Route exact path="/" render={(routerProps) => <HomePage {...routerProps} user={this.state.user} />} />
         </Switch>

@@ -257,19 +257,25 @@ a.image img {
 h3.card-content {
   font-size: 1.5em;
   font-weight: 550;
+  margin-top: 10px;
 }
 
+/* Review Page  */
+.review-card {
+  border-radius: 4px;
+  border: 1px solid #E6E6E6;
+  padding: 20px;
+  margin: 0px 0px 20px 0px;
+}
 
+.review-title {
+  padding: 20px 0px;
+  font-weight: bold;
+}
 
-
-
-
-/* Palette */
-/* turqouise: 8ECAE6
-green-blue: 219EBC
-blue: 023047
-orange-yellow: FFB703
-orange: FB8500 */
+.review-description {
+  padding: 0 0 20px 0;
+}
 
 .App {
   text-align: center;

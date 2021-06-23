@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {Link} from 'react-router-dom'
 
 export default function MovieCard({ movie }) {
+
+  // console.log(movie
+  
   return (
     <div className="card-wrap"> 
       <div className="image">

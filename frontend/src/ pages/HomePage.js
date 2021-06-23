@@ -28,7 +28,44 @@ export default class HomePage extends Component {
       <div>
         <h2>Welcome {this.props.user.first_name}!</h2>
         <Link to="/login">Logout</Link>
-        <section>{ this.displayMovieCard() }</section>
+        <header className="header">
+          <div className="nav-wrap">
+            <div className="nav-content">
+              {/* <a className="logo" href="">Movie Bank</a> */}
+              <ul className="navbar nav-text">
+              </ul>
+            </div>
+            <div className="nav-extra">
+              <ul className="extra nav-text">
+                <li>
+                  <a href="" className="search-link">Search</a>
+                </li>
+                <li>
+                <Link to="/login">Logout</Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </header>
+        <div className="container">
+          <main id="main">
+            <div className="App">
+              <section className="top-content">
+                <div className="content-wrap">
+                  <h2>Welcome to Movie Bank!</h2>
+                  <h3></h3>
+                  <h4></h4>
+                </div>
+              </section>
+              <div className="sandwich">
+                <h2></h2>
+              </div>
+            </div>
+            <section className="movie-section">
+              { this.displayMovieCard() }
+            </section>
+          </main>
+        </div>
       </div>
     )
   }

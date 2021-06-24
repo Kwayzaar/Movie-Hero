@@ -104,6 +104,7 @@ class ReviewPage extends Component {
               <label>Title</label>
               <input 
                 type="text" 
+                className="input"
                 name="title" 
                 value={this.state.title} 
                 onChange={this.handleChange} 
@@ -111,11 +112,12 @@ class ReviewPage extends Component {
               <label>Description</label>
               <input 
                 type="text" 
+                className="input description"
                 name="description" 
                 value={this.state.description} 
                 onChange={this.handleChange}
               />
-              <input type="submit" value="Fire" />
+              <input type="submit" className="button" value="Full Send" />
             </form>
           </div>
         </div>

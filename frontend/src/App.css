@@ -222,6 +222,8 @@ section.movie-section {
   box-sizing: border-box;
   padding-top: 20px;
   padding-bottom: 20px;
+  background: #023047;
+  background-image: linear-gradient(to bottom right, #023047, #245269, #315c72);
 }
 
 div.card-wrap {
@@ -362,11 +364,7 @@ form p {
 /* Review Page  */
 
 div.wrap {
-  /* min-height: 300px;
-  max-height: 360px; */
-  /* height: calc(100vh / 2.5); */
   height: 100vh;
-  /* width: 100%; */
   background: linear-gradient(rgba(69, 123, 157, 0.86), rgba(168, 218, 220, 0.65)), url("https://c4.wallpaperflare.com/wallpaper/528/972/976/kill-bill-kill-bill-vol-1-wallpaper-preview.jpg");
   background-position: center;
   background-size: cover;
@@ -374,7 +372,6 @@ div.wrap {
 }
 
 div.review-column {
-  /* background: #fff;  */
   max-width: 60%;
   width: 60%;
   float: left; 
@@ -383,6 +380,7 @@ div.review-column {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  margin-top: 30px;
 }
 
 div.review-header {
@@ -394,7 +392,7 @@ div.review-header {
   display: flex;
   justify-content: flex-start;
   font-family: 'Cabin', sans-serif;
-  background: rgb(150, 179, 232, .50);
+  background: rgb(65, 98, 115, .5);
   box-shadow: 0 0 15px -6px rgb(172, 172, 172);
   border-radius: 10px 10px 0 0;
 }
@@ -418,13 +416,12 @@ div.show-reviews {
   width: 100%;
   margin-left: 50px;
   display: flex;
-  background: rgb(150, 179, 232, .53);
+  background: rgb(65, 98, 115, .5);
   box-shadow: 0 0 15px -6px rgb(172, 172, 172);
   border-radius: 0 0 10px 10px;
 }
 
 div.review-column-2 {
-  /* background: #fff;  */
   max-width: 50%;
   width: 40%;
   float: left; 
@@ -433,12 +430,19 @@ div.review-column-2 {
   flex-direction: column;
 }
 
+/* Review form  */
+
 .review-card {
   border-radius: 10px;
   border: 1px solid #E6E6E6;
   padding: 20px;
   margin: 0px 0px 20px 0px;
   box-shadow: 0 0 15px -6px rgb(172, 172, 172);
+  background: rgb(65, 98, 115, .5);
+}
+
+.review-card label:first-of-type {
+  margin-top: 40px;
 }
 
 .review-title {
@@ -464,6 +468,6 @@ form.review-card {
   margin-right: 50px;
 }
 
-/* Review form  */
+
 
 

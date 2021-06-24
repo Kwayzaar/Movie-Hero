@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 // import ReviewForm from '../components/ReviewForm'
 
-const movieUrl = "http://localhost:3000/movies/1"
+const movieUrl = "http://localhost:3000/movies/4"
 
 class ReviewPage extends Component {
   state = {
@@ -55,8 +55,8 @@ class ReviewPage extends Component {
   showReviews = () => {
     return this.state.reviews.map(review => {
       return <div className="review-text">
-        <p>Title: {review.title}</p>
-        <p>Description: {review.description}</p>
+        <p>Name: {review.title}</p>
+        <p>Review: {review.description}</p>
       </div>
     })
   }
@@ -89,7 +89,17 @@ class ReviewPage extends Component {
               src={this.state.movie.image_url} 
               alt={this.state.movie.name} 
             />
-            <h2 className="movie-title">{this.state.movie.name}</h2> 
+            <div className="info-wrap">
+              <h2 className="movie-title">{this.state.movie.name}</h2> 
+              <div>
+                <ul className="movie-info">
+                  <p>Released: {this.state.movie.release_year}</p>
+                  <p>Released: {this.state.movie.genre}</p>
+                  <p>Released: {this.state.movie.director}</p>
+                  <p>Released: {this.state.movie.description}</p>
+                </ul>
+              </div>
+            </div>
           </div>
           <div className="show-reviews">
             {/* <div className="review-text"> */}

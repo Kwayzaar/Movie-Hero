@@ -390,11 +390,50 @@ div.review-header {
   text-align: center;
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: row;
+  /* justify-content: flex-start; */
   font-family: 'Cabin', sans-serif;
   background: rgb(65, 98, 115, .5);
   box-shadow: 1px 0 5px 0 rgb(172, 172, 172);
   border-radius: 10px 10px 0 0;
+}
+
+div.info-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+ul.movie-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 17px;
+  text-align:left;
+}
+
+ul.movie-info p {
+  justify-content: flex-end;
+  margin: 5px 5px 0 10px;
+  word-wrap: normal;
+  padding: 2px;
+  line-height: 18px;
+}
+
+ul.movie-info p:last-child {
+  
+}
+
+h2.movie-title {
+  font-family: 'Cabin', sans-serif;
+  margin: 10px 0 0 5px;
+  justify-self: flex-start;
+}
+
+ul.movie-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .review-column img {
@@ -402,11 +441,6 @@ div.review-header {
   width: 400;
   border-radius: 10px;
   margin: 10px 0 0 10px;
-}
-
-h2.movie-title {
-  font-family: 'Cabin', sans-serif;
-  margin: 10px 0 0 5px;
 }
 
 div.show-reviews {

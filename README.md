@@ -11,5 +11,12 @@ This is an app that allows you to keep track of and review movies you've watched
 5. run `npm start` to get your web page going 
 6. Enjoy!
 
+## Features 
+* Fully persistent user Authentication 
+* User reviews 
 
+## Tech Stack
+* React 
+* Ruby on Rails 
 
+### Stay tuned for future iterations!

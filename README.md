@@ -1,8 +1,8 @@
 # Welcome to Movie Hero! 
 
 This is an app that allows you to keep track of and review movies you've watched! 
+---------------------------------------------------------------------------------
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Clone this repo and `cd backend` then `bundle install` 
 2. run `rails s` to get your server going

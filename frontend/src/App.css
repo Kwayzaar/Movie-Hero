@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed&family=Cabin:ital,wght@0,400;0,500;0,700;1,700&display=swap');
+
+
 /* Reset */
 
 html, body, div, span, applet, object, iframe,
@@ -59,7 +62,7 @@ body ul {
   font-size: 16px;
 }
 
-header {
+header.header {
   display: flex;
   flex-direction: row;
   padding: 0;
@@ -74,6 +77,8 @@ header {
   position: fixed;
   transition: top 0.2s linear;
 }
+
+
 
 header ul {
   display: flex;
@@ -91,7 +96,8 @@ header ul {
 }
 
 ul.nav-text a {
-  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+  font-family: 'Cabin', sans-serif;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -189,6 +195,7 @@ div.content-wrap {
 }
 
 div.content-wrap h2, div.content-wrap h3, h4 {
+  font-family: 'Cabin', sans-serif;
   font-size: 3em;
   font-weight: 700;
   color: white;
@@ -281,20 +288,182 @@ h3.card-content {
   text-align: center;
 }
 
+/* login and signup page  */
+
 form {
+  background-color: whitesmoke;
   display: flex;
   margin: auto;
   align-self: center;
+  align-content: space-around;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
+  height: 350px;
   width: 350px;
   padding: 20px;
-  box-shadow: 0 0 15px -6px rgb(172, 172, 172)
+  box-shadow: 0 0 15px -6px rgb(172, 172, 172);
+  border-radius: 10px;
+  font-family: 'Cabin', sans-serif;
+}
+
+.form-container {
+  background-image: linear-gradient(to bottom right, #023047, #245269, #315c72);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 form input {
   margin: 10px;
 }
 
-h2.login-title {
-  margin: 5px 0 10px 0;
+.input {
+  height: 23px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 1px rgb(172, 172, 172);
+  border: 1px solid rgb(228, 225, 225); 
 }
+
+.button {
+  font-family: 'Cabin', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  width: 80px;
+  border-radius: 10px;
+  padding: 5px; 
+  margin-top: 25px;
+  background: #219EBC;
+  color: white;
+}
+
+h2.login-title, .sign-up h1 {
+  box-sizing: border-box;
+  font-size: 40px;
+  padding: 0;
+  margin: 0 0 60px 0;
+}
+
+label {
+  font-size: 20px;
+}
+
+form p {
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+.sign-up form {
+  height: 500px;
+}
+
+/* Review Page  */
+
+div.wrap {
+  /* min-height: 300px;
+  max-height: 360px; */
+  /* height: calc(100vh / 2.5); */
+  height: 100vh;
+  /* width: 100%; */
+  background: linear-gradient(rgba(69, 123, 157, 0.86), rgba(168, 218, 220, 0.65)), url("https://c4.wallpaperflare.com/wallpaper/528/972/976/kill-bill-kill-bill-vol-1-wallpaper-preview.jpg");
+  background-position: center;
+  background-size: cover;
+  justify-content: flex-end;
+}
+
+div.review-column {
+  /* background: #fff;  */
+  max-width: 60%;
+  width: 60%;
+  float: left; 
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+div.review-header {
+  padding: 0;
+  margin-left: 50px;
+  font-size: 30px;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  font-family: 'Cabin', sans-serif;
+  background: rgb(150, 179, 232, .50);
+  box-shadow: 0 0 15px -6px rgb(172, 172, 172);
+  border-radius: 10px 10px 0 0;
+}
+
+.review-column img {
+  height: 300px;
+  width: 400;
+  border-radius: 10px;
+  margin: 10px 0 0 10px;
+}
+
+h2.movie-title {
+  font-family: 'Cabin', sans-serif;
+  margin: 10px 0 0 5px;
+}
+
+div.show-reviews {
+  height: 400px;
+  color: black;
+  background: lightblue;
+  width: 100%;
+  margin-left: 50px;
+  display: flex;
+  background: rgb(150, 179, 232, .53);
+  box-shadow: 0 0 15px -6px rgb(172, 172, 172);
+  border-radius: 0 0 10px 10px;
+}
+
+div.review-column-2 {
+  /* background: #fff;  */
+  max-width: 50%;
+  width: 40%;
+  float: left; 
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-card {
+  border-radius: 10px;
+  border: 1px solid #E6E6E6;
+  padding: 20px;
+  margin: 0px 0px 20px 0px;
+  box-shadow: 0 0 15px -6px rgb(172, 172, 172);
+}
+
+.review-title {
+  padding: 20px 0px;
+  font-weight: bold;
+}
+
+.review-description {
+  padding: 0 0 20px 0;
+}
+
+div.review-form{
+  height: 100%;
+  width: 100%;
+  margin-left: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* padding-top: 50px; */
+}
+
+form.review-card {
+  margin-right: 50px;
+}
+
+/* Review form  */
+
+

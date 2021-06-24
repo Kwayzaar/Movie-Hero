@@ -18,18 +18,20 @@ export default function LoginForm({ login, error, history }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h2 className="login-title">Login</h2>
-      <label>Username</label>
-      <input name="username" value={username} onChange={handleUsernameChange} />
-      <label>Password</label>
-      <input type="password" name="password" value={password} onChange={handlePasswordChange} />
-      <p>
-        Ready to start tracking? 
-        <Link to="/signup">Join Us.</Link> 
-      </p>
-      {error ? <p style={{color: 'red'}}>{error}</p> : null}
-      <input type="submit" value="Login"/>
-    </form>
+    <div className="form-container">
+      <form onSubmit={handleSubmit}>
+        {/* <h2 className="login-title">Login</h2> */}
+        <label>Username</label>
+        <input className="input" name="username" value={username} onChange={handleUsernameChange} />
+        <label>Password</label>
+        <input className="input" type="password" name="password" value={password} onChange={handlePasswordChange} />
+        <p>
+          Ready to start tracking? 
+        </p>
+          <Link to="/signup">Join Us.</Link> 
+        {error ? <p style={{color: 'red'}}>{error}</p> : null}
+        <input className="button" type="submit" value="Enter"/>
+      </form>
+    </div>
   )
 }

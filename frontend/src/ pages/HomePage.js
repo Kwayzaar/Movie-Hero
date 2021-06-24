@@ -26,8 +26,8 @@ export default class HomePage extends Component {
   render() {
     return (
       <div>
-        <h2>Welcome {this.props.user.first_name}!</h2>
-        <Link to="/login">Logout</Link>
+        {/* <h2>Welcome {this.props.user.first_name}!</h2>
+        <Link to="/login">Logout</Link> */}
         <header className="header">
           <div className="nav-wrap">
             <div className="nav-content">
@@ -52,7 +52,7 @@ export default class HomePage extends Component {
             <div className="App">
               <section className="top-content">
                 <div className="content-wrap">
-                  <h2>Welcome to Movie Bank!</h2>
+                  <h2>Welcome Eric!</h2>
                   <h3></h3>
                   <h4></h4>
                 </div>

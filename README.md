@@ -1,4 +1,4 @@
-#Welcome to Movie Hero!#
+#Welcome to Movie Hero! 
 
 1. Clone this repo and `cd auth-backend` then `bundle install` 
 2. Run `rails db:migrate` 

@@ -272,7 +272,7 @@ h3.card-content {
 /* Review Page  */
 .review-card {
   border-radius: 4px;
-  border: 1px solid #E6E6E6;
+  /* border: 1px solid #E6E6E6; */
   padding: 20px;
   margin: 0px 0px 20px 0px;
 }
@@ -393,7 +393,7 @@ div.review-header {
   justify-content: flex-start;
   font-family: 'Cabin', sans-serif;
   background: rgb(65, 98, 115, .5);
-  box-shadow: 0 0 15px -6px rgb(172, 172, 172);
+  box-shadow: 1px 0 5px 0 rgb(172, 172, 172);
   border-radius: 10px 10px 0 0;
 }
 
@@ -416,9 +416,23 @@ div.show-reviews {
   width: 100%;
   margin-left: 50px;
   display: flex;
+  justify-content: flex-start;
   background: rgb(65, 98, 115, .5);
-  box-shadow: 0 0 15px -6px rgb(172, 172, 172);
+  box-shadow: -1px 0 5px -1px rgb(172, 172, 172);
   border-radius: 0 0 10px 10px;
+}
+
+div.review-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: 'Cabin', sans-serif;
+  font-size: 20px;
+  margin: 10px 0 0 10px;
+}
+
+.review-text p {
+  padding: 5px;
 }
 
 div.review-column-2 {
@@ -434,10 +448,9 @@ div.review-column-2 {
 
 .review-card {
   border-radius: 10px;
-  border: 1px solid #E6E6E6;
   padding: 20px;
   margin: 0px 0px 20px 0px;
-  box-shadow: 0 0 15px -6px rgb(172, 172, 172);
+  box-shadow: 1px 0 5px 0 rgb(172, 172, 172);
   background: rgb(65, 98, 115, .5);
 }
 

@@ -54,7 +54,7 @@ class ReviewPage extends Component {
 
   showReviews = () => {
     return this.state.reviews.map(review => {
-      return <div>
+      return <div className="review-text">
         <p>Title: {review.title}</p>
         <p>Description: {review.description}</p>
       </div>
@@ -92,9 +92,9 @@ class ReviewPage extends Component {
             <h2 className="movie-title">{this.state.movie.name}</h2> 
           </div>
           <div className="show-reviews">
-            <div>
+            {/* <div className="review-text"> */}
               {this.showReviews()}
-            </div>
+            {/* </div> */}
           </div>
         </div>
         <div className="review-column-2">

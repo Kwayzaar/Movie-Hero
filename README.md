@@ -1,7 +1,6 @@
 # Welcome to Movie Hero! 
 
 This is an app that allows you to keep track of and review movies you've watched! 
----------------------------------------------------------------------------------
 
 ## Getting Started 
 

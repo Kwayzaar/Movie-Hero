@@ -10,7 +10,8 @@ This is an app that allows you to keep track of and review movies you've watched
 4. `cd ..` to get back to the root directory
 5. `cd frontend` and `npm install` 
 6. run `npm start` to get your web page going 
-7. Enjoy!
+7. To log in: username: eric, password: lee 
+8. Enjoy!
 
 ## Features 
 * Fully persistent user Authentication 
